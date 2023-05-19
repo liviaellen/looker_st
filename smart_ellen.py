@@ -27,6 +27,6 @@ if st.button("Ask"):
             st.write(response)
         else:
             st.write(response['choices'][0].text)
-     except Exception as e:
+    except Exception as e:
         st.write(e.message)
         st.write(e.args)

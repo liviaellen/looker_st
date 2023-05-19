@@ -4,11 +4,11 @@ import openai
 """# Smart Ellen """
 text_input = st.text_input('Ask me anything', "Write a paragraph about a guy named mike who moves to bali to study data analytics in a coding bootcamp who just celebrate his birthday")
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+#openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key=st.secrets["API_KEY"]
 
 
 if st.button("Ask"):
-    #openai.api_key ="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"
     response = openai.Completion.create(
     model="text-davinci-003",
     prompt=text_input,
